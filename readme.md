@@ -33,7 +33,7 @@ Required Dependencies
 
 After making your modifications, run the following two commands.
 
-<code>npm install --save-dev @electron-forge/cli<br>
-npx electron-forge import</code>
+<code>npm install --save-dev @electron-forge/cli</code><br>
+If you want to, you can run <code>npx electron-forge import</code>. However, this is most likely not required.
 
 If all goes well, you should be able to run <code>npm run make</code> and compile it.
