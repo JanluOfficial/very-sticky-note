@@ -8,6 +8,7 @@ var textOutput = document.createElement('a')
 var reader = new FileReader;
 
 const newPopup = document.getElementById("new");
+const newButtons = document.getElementById("newButtons");
 const buttonNew = document.getElementById("buttonNew");
 const buttonSave = document.getElementById("buttonSave");
 const buttonOpen = document.getElementById("buttonOpen");
@@ -19,22 +20,25 @@ function sleep(ms = 0) {
 }
 
 // Main Code
+// Color
 function col() {
     if (color === 5) {
-        color = 0
+        color = 0;
     } else {
         color += 1;
     };
+    
     base.innerHTML = ":root {--background: var(--background-" + color + ")}";
     return color;
 }
 
+// Clear
 function clearText() {
     text.value = "";
     newPopup.className = "new hidden";
+    newButtons.className = "confirmButtons hidden";
     textInput.focus();
 
-    buttonNew.disabled = false;
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
     buttonCol.disabled = false;
@@ -43,6 +47,7 @@ function clearText() {
 function promptClear() {
     if (text.value != "") {
         newPopup.className = "new";
+        newButtons.className = "confirmButtons";
         buttonNew.disabled = true;
         buttonSave.disabled = true;
         buttonOpen.disabled = true;
@@ -52,6 +57,7 @@ function promptClear() {
 
 function unpromptClear() {
     newPopup.className = "new hidden";
+    newButtons.className = "confirmButtons hidden";
     buttonNew.disabled = false;
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
@@ -59,6 +65,7 @@ function unpromptClear() {
     textInput.focus()
 }
 
+// Open
 function readText() {
     textInput.type = 'file';
     textInput.click()
@@ -78,12 +85,23 @@ textInput.onchange = (e) => {
     textInput.focus()
 };
 
+// Save
 function saveText() {
 
     textOutput.href = "data:text/plain;charset=utf-8," + text.value;
     textOutput.download = "text_edit_demo_save.txt";
     textOutput.click();
     textInput.focus()
+}
+
+// Behaviour
+// Disable clear button when text is empty
+text.oninput = (e) => {
+    if (text.value === "") {
+        buttonNew.disabled = true;
+    } else {
+        buttonNew.disabled = false;
+    }
 }
 
 // Focusing the text on runtime

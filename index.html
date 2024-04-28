@@ -34,7 +34,7 @@
                     file_open
                 </span>
             </button>
-            <button id="buttonCol" class="icon" onclick="col()">
+            <button id="buttonCol" class="icon" onclick="col();">
                 <span class="material-symbols-rounded">
                     palette
                 </span>
@@ -43,7 +43,7 @@
         <!-- Save Prompt -->
         <div id="new" class="new hidden">
             <h class="confirmText">Do you want to clear the entire sticky note?</h>
-            <div class="confirmButtons">
+            <div id="newButtons" class="confirmButtons">
                 <button onclick="clearText()">Yes</button>
                 <button class="recommended" onclick="unpromptClear()">No</button>
             </div>

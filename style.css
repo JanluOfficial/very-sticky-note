@@ -4,10 +4,13 @@
     --background: var(--background-0);
     --background-0: hsl(48, 100%, 82%);
     --background-1: hsl(120, 100%, 82%);
-    --background-2: hsl(214, 100%, 82%);
+    --background-2: hsl(180, 100%, 82%);
     --background-3: hsl(290, 100%, 82%);
     --background-4: hsl(0, 100%, 82%);
     --background-5: hsl(27, 100%, 82%);
+
+    --default-150ms: cubic-bezier(0.2, 0, 0.1, 1) 150ms;
+    --default-333ms: cubic-bezier(0.2, 0, 0.1, 1) 333ms;
 }
 
 * {
@@ -62,7 +65,11 @@ button {
 
     font-size: 16px;
 
-    transition: cubic-bezier(0.2, 0, 0.1, 1) 150ms;
+    transition: var(--default-150ms);
+}
+
+button.icon span {
+    transition: var(--default-150ms);
 }
 
 button:disabled, button.icon:disabled, button.icon:disabled:hover, button.icon:disabled:active {
@@ -182,10 +189,15 @@ div.new {
 
     flex-direction: column;
     justify-content: flex-end;
+
+    opacity: 1;
+    transition: var(--default-333ms);
 }
 
 div.new.hidden {
-    display: none;
+    opacity: 0;
+    scale: 0.95;
+    pointer-events: none;
 }
 
 div.confirmButtons {
@@ -197,6 +209,12 @@ div.confirmButtons {
     flex-direction: row !important;
     padding: 10px;
     gap: 10px;
+    transition: var(--default-333ms);
+}
+
+div.confirmButtons.hidden {
+    padding-bottom: 0px;
+    transition: var(--default-333ms);
 }
 
 div.confirmButtons button {
