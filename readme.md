@@ -1,7 +1,6 @@
-ps. currently unable to pre-compile due to environment issues.
-
 # Very Sticky Note
 A sticky note that is very sticky, and will always be on top.
+![A screenshot of very sticky note!](https://github.com/JanluOfficial/very-sticky-note/assets/95766563/916c651a-302d-4419-a05e-598c6c06bd7a)
 
 ## Why does this exist?
 It was initially just intended to show off a feature request for [Fluid](https://fluid.so/), but then I decided to make it into a functioning application.
