@@ -22,3 +22,16 @@ After cloning the repository, go to the directory and run <code>npm install --sa
 
 ### Grabbing a pre-compiled version
 Head over to the <code>Releases</code> section on the right side of your screen and download the version for your operating system.
+
+## How do I make my own version of it?
+Required Dependencies
+- Node.js
+- Electron
+- Electron Forge
+
+After making your modifications, run the following two commands.
+
+<code>npm install --save-dev @electron-forge/cli<br>
+npx electron-forge import</code>
+
+If all goes well, you should be able to run <code>npm run make</code> and compile it.

@@ -10,6 +10,7 @@
   "author": "Janlu",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
     "electron": "^30.0.1"
   }
 }
