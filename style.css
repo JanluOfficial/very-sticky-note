@@ -28,7 +28,7 @@
 
 html {
     background: var(--background);
-    transition: cubic-bezier(0.2, 0, 0.1, 1) 750ms;
+    transition: cubic-bezier(0.2, 0, 0.1, 1) 150ms;
 }
 
 div.buttons {
