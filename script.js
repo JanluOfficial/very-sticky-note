@@ -7,6 +7,17 @@ var textInput = document.createElement('input');
 var textOutput = document.createElement('a')
 var reader = new FileReader;
 
+const newPopup = document.getElementById("new");
+const buttonNew = document.getElementById("buttonNew");
+const buttonSave = document.getElementById("buttonSave");
+const buttonOpen = document.getElementById("buttonOpen");
+const buttonCol = document.getElementById("buttonCol");
+
+// Base Functions
+function sleep(ms = 0) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Main Code
 function col() {
     if (color === 5) {
@@ -14,20 +25,37 @@ function col() {
     } else {
         color += 1;
     };
-    base.innerHTML = "html { background: var(--background-" + color + ") !important;} ::-webkit-scrollbar-thumb {border: 1px solid var(--background-" + color + ");}";
+    base.innerHTML = ":root {--background: var(--background-" + color + ")}";
     return color;
 }
 
 function clearText() {
-    var confirmation = false;
-    if (text.valueL !== "") {
-        confirmation = confirm("Are you sure you want to clear the page?");
-    } else {
-        confirmation = true;
+    text.value = "";
+    newPopup.className = "new hidden";
+    textInput.focus();
+
+    buttonNew.disabled = false;
+    buttonSave.disabled = false;
+    buttonOpen.disabled = false;
+    buttonCol.disabled = false;
+}
+
+function promptClear() {
+    if (text.value != "") {
+        newPopup.className = "new";
+        buttonNew.disabled = true;
+        buttonSave.disabled = true;
+        buttonOpen.disabled = true;
+        buttonCol.disabled = true;
     }
-    if (confirmation) {
-        text.value = "";
-    }
+}
+
+function unpromptClear() {
+    newPopup.className = "new hidden";
+    buttonNew.disabled = false;
+    buttonSave.disabled = false;
+    buttonOpen.disabled = false;
+    buttonCol.disabled = false;
     textInput.focus()
 }
 

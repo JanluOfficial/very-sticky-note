@@ -1,7 +1,7 @@
 {
-  "name": "sticky_note",
+  "name": "very_sticky_note",
   "version": "1.0.0",
-  "description": "A simple sticky note app",
+  "description": "A very sticky note, that always stays on top no matter what.",
   "main": "electron_start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
