@@ -1,0 +1,15 @@
+{
+  "name": "sticky_note",
+  "version": "1.0.0",
+  "description": "A simple sticky note app",
+  "main": "electron_start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Janlu",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "electron": "^30.0.1"
+  }
+}

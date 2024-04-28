@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Sticky Note</title>
+    <link rel="stylesheet" href="style.css">
+    <style id="base"></style>
+    <script src="./renderer.js"></script>
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <!-- <button class="close-button"></button> -->
+    </div>
+    <!-- Text Area -->
+    <textarea id="text" spellcheck="false">This is a very sticky note.
+- Made by Janlu!</textarea>
+    <!-- Buttons -->
+    <div class="buttons">
+        <button onclick="clearText()">
+            <span class="material-symbols-rounded">
+                note_stack
+            </span>
+        </button>
+        <button onclick="saveText()">
+            <span class="material-symbols-rounded">
+                save
+            </span>
+        </button>
+        <button onclick="readText()">
+            <span class="material-symbols-rounded">
+                file_open
+            </span>
+        </button>
+        <button onclick="col()">
+            <span class="material-symbols-rounded">
+                palette
+            </span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
