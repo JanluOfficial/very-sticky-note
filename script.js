@@ -8,6 +8,7 @@ var textOutput = document.createElement('a')
 var reader = new FileReader;
 
 const newPopup = document.getElementById("new");
+const divToolbar = document.getElementById("toolbar");
 const newButtons = document.getElementById("newButtons");
 const buttonNew = document.getElementById("buttonNew");
 const buttonSave = document.getElementById("buttonSave");
@@ -39,6 +40,7 @@ function clearText() {
     newButtons.className = "confirmButtons hidden";
     textInput.focus();
 
+    divToolbar.className = "buttons";
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
     buttonCol.disabled = false;
@@ -48,6 +50,7 @@ function promptClear() {
     if (text.value != "") {
         newPopup.className = "new";
         newButtons.className = "confirmButtons";
+        divToolbar.className = "buttons blurred";
         buttonNew.disabled = true;
         buttonSave.disabled = true;
         buttonOpen.disabled = true;
@@ -58,6 +61,7 @@ function promptClear() {
 function unpromptClear() {
     newPopup.className = "new hidden";
     newButtons.className = "confirmButtons hidden";
+    divToolbar.className = "buttons";
     buttonNew.disabled = false;
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
@@ -87,21 +91,22 @@ textInput.onchange = (e) => {
 
 // Save
 function saveText() {
-
     textOutput.href = "data:text/plain;charset=utf-8," + text.value;
     textOutput.download = "text_edit_demo_save.txt";
     textOutput.click();
     textInput.focus()
+    buttonSave.disabled = true;
 }
 
 // Behaviour
-// Disable clear button when text is empty
+// Disable clear and save button when text is empty
 text.oninput = (e) => {
     if (text.value === "") {
         buttonNew.disabled = true;
     } else {
         buttonNew.disabled = false;
-    }
+    };
+    buttonSave.disabled = false;
 }
 
 // Focusing the text on runtime

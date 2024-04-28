@@ -10,42 +10,44 @@
         <script src="./renderer.js"></script>
     </head>
     <body>
-        <!-- Title Bar -->
-        <div class="title-bar">
-            <!-- <button class="close-button"></button> -->
-        </div>
-        <!-- Text Area -->
-        <textarea placeholder="This is a very sticky note." id="text" spellcheck="false">This is a very sticky note.
+        <div class="background">
+            <!-- Title Bar -->
+            <div class="title-bar">
+                <!-- <button class="close-button"></button> -->
+            </div>
+            <!-- Text Area -->
+            <textarea placeholder="This is a very sticky note." id="text" spellcheck="false">This is a very sticky note.
 - Made by Janlu!</textarea>
-        <!-- Buttons -->
-        <div class="buttons">
-            <button id="buttonNew" class="icon" onclick="promptClear()">
-                <span class="material-symbols-rounded">
-                    note_stack
-                </span>
-            </button>
-            <button id="buttonSave" class="icon" onclick="saveText()">
-                <span class="material-symbols-rounded">
-                    save
-                </span>
-            </button>
-            <button id="buttonOpen" class="icon" onclick="readText()">
-                <span class="material-symbols-rounded">
-                    file_open
-                </span>
-            </button>
-            <button id="buttonCol" class="icon" onclick="col();">
-                <span class="material-symbols-rounded">
-                    palette
-                </span>
-            </button>
-        </div>
-        <!-- Save Prompt -->
-        <div id="new" class="new hidden">
-            <h class="confirmText">Do you want to clear the entire sticky note?</h>
-            <div id="newButtons" class="confirmButtons">
-                <button onclick="clearText()">Yes</button>
-                <button class="recommended" onclick="unpromptClear()">No</button>
+            <!-- Buttons -->
+            <div id="toolbar" class="buttons">
+                <button id="buttonNew" class="icon" onclick="promptClear()">
+                    <span class="material-symbols-rounded">
+                        note_stack
+                    </span>
+                </button>
+                <button id="buttonSave" class="icon" onclick="saveText()">
+                    <span class="material-symbols-rounded">
+                        save
+                    </span>
+                </button>
+                <button id="buttonOpen" class="icon" onclick="readText()">
+                    <span class="material-symbols-rounded">
+                        file_open
+                    </span>
+                </button>
+                <button id="buttonCol" class="icon" onclick="col();">
+                    <span class="material-symbols-rounded">
+                        palette
+                    </span>
+                </button>
+            </div>
+            <!-- Save Prompt -->
+            <div id="new" class="new hidden">
+                <h class="confirmText">Do you want to clear the entire sticky note?</h>
+                <div id="newButtons" class="confirmButtons">
+                    <button onclick="clearText()">Yes</button>
+                    <button class="recommended" onclick="unpromptClear()">No</button>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>

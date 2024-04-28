@@ -6,7 +6,9 @@ const createWindow = () => {
       minWidth: 280,
       height: 280,
       minHeight: 200,
-      frame: false
+      frame: false,
+      transparent: true,
+      icon: "icon.png",
     })
 
     win.loadFile('index.html');
