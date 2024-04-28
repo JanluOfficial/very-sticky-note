@@ -1,5 +1,6 @@
 # Very Sticky Note
-![Logo](https://github.com/JanluOfficial/very-sticky-note/assets/95766563/7ad6fbad-c3b2-4ccd-840f-918f1df522eb)
+![icon](https://github.com/JanluOfficial/very-sticky-note/assets/95766563/03e3b95e-2052-49b9-b8b6-0082bde1187c)
+
 A sticky note that is very sticky, and will always be on top.
 
 ### Screenshot (from v1.0.0)
