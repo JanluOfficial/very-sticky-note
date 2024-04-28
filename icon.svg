@@ -26,25 +26,50 @@
 </g>
 </g>
 <g filter="url(#filter1_d_1_4)">
-<rect x="27.9562" y="22.2911" width="65" height="65" rx="12" transform="rotate(5 27.9562 22.2911)" fill="#FFEDA3"/>
+<rect x="17" y="17" width="65" height="65" rx="12" fill="#A3FFFF"/>
 <g clip-path="url(#clip5_1_4)">
+<rect x="23" y="27" width="7" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="32" y="27" width="14" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="48" y="27" width="8" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="58" y="27" width="14" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+</g>
+<g clip-path="url(#clip6_1_4)">
+<rect x="23" y="39" width="17" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="42" y="39" width="10" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="54" y="39" width="13" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+</g>
+<g clip-path="url(#clip7_1_4)">
+<rect x="23" y="45" width="8" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="33" y="45" width="9" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="44" y="45" width="12" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="58" y="45" width="5" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+</g>
+<g clip-path="url(#clip8_1_4)">
+<rect x="23" y="51" width="9" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="34" y="51" width="6" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+<rect x="42" y="51" width="12" height="4" rx="2" fill="black" fill-opacity="0.8"/>
+</g>
+</g>
+<g filter="url(#filter2_d_1_4)">
+<rect x="27.9562" y="22.2911" width="65" height="65" rx="12" transform="rotate(5 27.9562 22.2911)" fill="#FFEDA3"/>
+<g clip-path="url(#clip9_1_4)">
 <rect x="33.0619" y="32.776" width="7" height="4" rx="2" transform="rotate(5 33.0619 32.776)" fill="black" fill-opacity="0.8"/>
 <rect x="42.0276" y="33.5604" width="14" height="4" rx="2" transform="rotate(5 42.0276 33.5604)" fill="black" fill-opacity="0.8"/>
 <rect x="57.9667" y="34.9549" width="8" height="4" rx="2" transform="rotate(5 57.9667 34.9549)" fill="black" fill-opacity="0.8"/>
 <rect x="67.9287" y="35.8264" width="14" height="4" rx="2" transform="rotate(5 67.9287 35.8264)" fill="black" fill-opacity="0.8"/>
 </g>
-<g clip-path="url(#clip6_1_4)">
+<g clip-path="url(#clip10_1_4)">
 <rect x="32.5389" y="38.7532" width="8" height="4" rx="2" transform="rotate(5 32.5389 38.7532)" fill="black" fill-opacity="0.8"/>
 <rect x="42.5009" y="39.6247" width="9" height="4" rx="2" transform="rotate(5 42.5009 39.6247)" fill="black" fill-opacity="0.8"/>
 <rect x="53.459" y="40.5834" width="12" height="4" rx="2" transform="rotate(5 53.459 40.5834)" fill="black" fill-opacity="0.8"/>
 <rect x="67.4057" y="41.8036" width="5" height="4" rx="2" transform="rotate(5 67.4057 41.8036)" fill="black" fill-opacity="0.8"/>
 </g>
-<g clip-path="url(#clip7_1_4)">
+<g clip-path="url(#clip11_1_4)">
 <rect x="32.016" y="44.7303" width="17" height="4" rx="2" transform="rotate(5 32.016 44.7303)" fill="black" fill-opacity="0.8"/>
 <rect x="50.9437" y="46.3863" width="10" height="4" rx="2" transform="rotate(5 50.9437 46.3863)" fill="black" fill-opacity="0.8"/>
 <rect x="62.898" y="47.4322" width="13" height="4" rx="2" transform="rotate(5 62.898 47.4322)" fill="black" fill-opacity="0.8"/>
 </g>
-<g clip-path="url(#clip8_1_4)">
+<g clip-path="url(#clip12_1_4)">
 <rect x="30.9701" y="56.6847" width="9" height="4" rx="2" transform="rotate(5 30.9701 56.6847)" fill="black" fill-opacity="0.8"/>
 <rect x="41.9283" y="57.6434" width="6" height="4" rx="2" transform="rotate(5 41.9283 57.6434)" fill="black" fill-opacity="0.8"/>
 <rect x="49.8978" y="58.3406" width="12" height="4" rx="2" transform="rotate(5 49.8978 58.3406)" fill="black" fill-opacity="0.8"/>
@@ -62,7 +87,17 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_4"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_4" result="shape"/>
 </filter>
-<filter id="filter1_d_1_4" x="14.2911" y="16.2911" width="86.4178" height="86.4178" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d_1_4" x="9" y="11" width="81" height="81" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_4"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_4" result="shape"/>
+</filter>
+<filter id="filter2_d_1_4" x="14.2911" y="16.2911" width="86.4178" height="86.4178" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="2"/>
@@ -88,15 +123,27 @@
 <rect width="31" height="4" fill="white" transform="translate(16.2316 46.3039) rotate(-5)"/>
 </clipPath>
 <clipPath id="clip5_1_4">
-<rect width="49" height="4" fill="white" transform="translate(33.0619 32.776) rotate(5)"/>
+<rect width="49" height="4" fill="white" transform="translate(23 27)"/>
 </clipPath>
 <clipPath id="clip6_1_4">
-<rect width="40" height="4" fill="white" transform="translate(32.5389 38.7532) rotate(5)"/>
+<rect width="44" height="4" fill="white" transform="translate(23 39)"/>
 </clipPath>
 <clipPath id="clip7_1_4">
-<rect width="44" height="4" fill="white" transform="translate(32.016 44.7303) rotate(5)"/>
+<rect width="40" height="4" fill="white" transform="translate(23 45)"/>
 </clipPath>
 <clipPath id="clip8_1_4">
+<rect width="31" height="4" fill="white" transform="translate(23 51)"/>
+</clipPath>
+<clipPath id="clip9_1_4">
+<rect width="49" height="4" fill="white" transform="translate(33.0619 32.776) rotate(5)"/>
+</clipPath>
+<clipPath id="clip10_1_4">
+<rect width="40" height="4" fill="white" transform="translate(32.5389 38.7532) rotate(5)"/>
+</clipPath>
+<clipPath id="clip11_1_4">
+<rect width="44" height="4" fill="white" transform="translate(32.016 44.7303) rotate(5)"/>
+</clipPath>
+<clipPath id="clip12_1_4">
 <rect width="31" height="4" fill="white" transform="translate(30.9701 56.6847) rotate(5)"/>
 </clipPath>
 </defs>
