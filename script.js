@@ -83,6 +83,7 @@ textInput.onchange = (e) => {
         const content = event.target.result;
         if (content != "undefined") {
             text.value = content;
+            buttonNew.disabled = false;
         };
     };
     reader.readAsText(file, 'utf-8');
