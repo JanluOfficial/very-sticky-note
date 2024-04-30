@@ -3,6 +3,7 @@ const { remote } = require('electron');
 const { BrowserWindow } = remote;
 
 const titleBar = document.querySelector('.title-bar');
+const exitButton = document.getElementById('exitButton');
 
 // Initialize drag variables
 let isDragging = false;
@@ -25,4 +26,9 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('mouseup', () => {
     isDragging = false;
+});
+
+exitButton.addEventListener('click', (e) => {
+    console.warn("Exiting now...")
+    w.close();
 });

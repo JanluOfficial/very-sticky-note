@@ -35,9 +35,9 @@
                         file_open
                     </span>
                 </button>
-                <button id="buttonCol" class="icon" onclick="col();">
+                <button id="buttonSet" class="icon" onclick="toggleOptions()">
                     <span class="material-symbols-rounded">
-                        palette
+                        settings
                     </span>
                 </button>
             </div>
@@ -48,6 +48,27 @@
                     <button onclick="clearText()">Yes</button>
                     <button class="recommended" onclick="unpromptClear()">No</button>
                 </div>
+            </div>
+            <!-- Options Prompt -->
+            <div class="options hidden" id="options">
+                <!-- <button class="borderless left" onclick="col()">
+                    <span class="material-symbols-rounded">
+                        palette
+                    </span>
+                    Color
+                </button> -->
+                <button class="borderless left recommended" id="boldButton" onclick="bold()">
+                    <span class="material-symbols-rounded">
+                        keep
+                    </span>
+                    Pin to top
+                </button>
+                <button class="borderless left" id="italicButton" onclick="italic()">
+                    <span class="material-symbols-rounded">
+                        format_italic
+                    </span>
+                    Italic
+                </button>
             </div>
         </div>
         <script src="script.js"></script>

@@ -1,19 +1,21 @@
 // Variables and Constants
+
 const base = document.getElementById("base");
 var color = 0;
 
-var text = document.getElementById("text");
+var textBox = document.getElementById("text");
 var textInput = document.createElement('input');
 var textOutput = document.createElement('a')
 var reader = new FileReader;
 
 const newPopup = document.getElementById("new");
+const optionsPopup = document.getElementById("options");
 const divToolbar = document.getElementById("toolbar");
 const newButtons = document.getElementById("newButtons");
 const buttonNew = document.getElementById("buttonNew");
 const buttonSave = document.getElementById("buttonSave");
 const buttonOpen = document.getElementById("buttonOpen");
-const buttonCol = document.getElementById("buttonCol");
+const buttonSet = document.getElementById("buttonSet");
 
 // Base Functions
 function sleep(ms = 0) {
@@ -35,7 +37,7 @@ function col() {
 
 // Clear
 function clearText() {
-    text.value = "";
+    textBox.value = "";
     newPopup.className = "new hidden";
     newButtons.className = "confirmButtons hidden";
     textInput.focus();
@@ -43,18 +45,18 @@ function clearText() {
     divToolbar.className = "buttons";
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
-    buttonCol.disabled = false;
+    buttonSet.disabled = false;
 }
 
 function promptClear() {
-    if (text.value != "") {
+    if (textBox.value != "") {
         newPopup.className = "new";
         newButtons.className = "confirmButtons";
         divToolbar.className = "buttons blurred";
         buttonNew.disabled = true;
         buttonSave.disabled = true;
         buttonOpen.disabled = true;
-        buttonCol.disabled = true;
+        buttonSet.disabled = true;
     }
 }
 
@@ -65,7 +67,7 @@ function unpromptClear() {
     buttonNew.disabled = false;
     buttonSave.disabled = false;
     buttonOpen.disabled = false;
-    buttonCol.disabled = false;
+    buttonSet.disabled = false;
     textInput.focus()
 }
 
@@ -77,12 +79,12 @@ function readText() {
 
 textInput.onchange = (e) => {
     var file = e.target.files[0];
-    text.value = file;
+    textBox.value = file;
 
     reader.onload = (event) => {
         const content = event.target.result;
         if (content != "undefined") {
-            text.value = content;
+            textBox.value = content;
             buttonNew.disabled = false;
         };
     };
@@ -92,22 +94,59 @@ textInput.onchange = (e) => {
 
 // Save
 function saveText() {
-    textOutput.href = "data:text/plain;charset=utf-8," + text.value;
+    textOutput.href = "data:text/plain;charset=utf-8," + textBox.value;
     textOutput.download = "text_edit_demo_save.txt";
     textOutput.click();
     textInput.focus()
     buttonSave.disabled = true;
 }
 
+// Options Prompt
+var wasNewDisabled = false;
+var wasSaveDisabled = false;
+var wasOpenDisabled = false;
+function toggleOptions() {
+    if (optionsPopup.className === "options") {
+        optionsPopup.className = "options hidden";
+        buttonNew.disabled = wasNewDisabled;
+        buttonSave.disabled = wasSaveDisabled;
+        buttonOpen.disabled = wasOpenDisabled;
+        buttonSet.className = "icon";
+        buttonSet.querySelector("span").className = "material-symbols-rounded";
+    } else {
+        optionsPopup.className = "options";
+        wasNewDisabled = buttonNew.disabled;
+        wasSaveDisabled = buttonSave.disabled;
+        wasOpenDisabled = buttonOpen.disabled;
+        buttonNew.disabled = true;
+        buttonSave.disabled = true;
+        buttonOpen.disabled = true;
+        buttonSet.className = "icon recommended";
+        buttonSet.querySelector("span").className = "material-symbols-rounded filled";
+    }
+}
+
 // Behaviour
 // Disable clear and save button when text is empty
-text.oninput = (e) => {
-    if (text.value === "") {
+textBox.oninput = (e) => {
+    if (textBox.value === "") {
         buttonNew.disabled = true;
     } else {
         buttonNew.disabled = false;
     };
     buttonSave.disabled = false;
+}
+
+// Formatting Options
+var italicButton = document.getElementById("italicButton");
+var boldButton = document.getElementById("boldButton");
+function bold() {
+    textBox.classList.toggle("bold");
+    boldButton.classList.toggle("recommended");
+}
+function italic() {
+    isItalic = textBox.classList.toggle("italic");
+    italicButton.classList.toggle("recommended");
 }
 
 // Focusing the text on runtime
