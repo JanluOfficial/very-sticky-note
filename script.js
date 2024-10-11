@@ -8,7 +8,7 @@ var textInput = document.createElement('input');
 var textOutput = document.createElement('a')
 var reader = new FileReader;
 
-const newPopup = document.getElementById("new");
+const promptPopup = document.getElementById("prompt");
 const optionsPopup = document.getElementById("options");
 const divToolbar = document.getElementById("toolbar");
 const newButtons = document.getElementById("newButtons");
@@ -38,7 +38,7 @@ function col() {
 // Clear
 function clearText() {
     textBox.value = "";
-    newPopup.className = "new hidden";
+    promptPopup.className = "new hidden";
     newButtons.className = "confirmButtons hidden";
     textInput.focus();
 
@@ -48,11 +48,17 @@ function clearText() {
     buttonSet.disabled = false;
 }
 
-function promptClear() {
+let prompttext = document.getElementById("promptText");
+let yesbutton = document.getElementById("yesbutton");
+function prompt(text, yesaction) {
     if (textBox.value != "") {
-        newPopup.className = "new";
+        promptPopup.className = "new";
         newButtons.className = "confirmButtons";
         divToolbar.className = "buttons blurred";
+
+        yesbutton.setAttribute("onClick", yesaction);
+        prompttext.innerHTML = text;
+
         buttonNew.disabled = true;
         buttonSave.disabled = true;
         buttonOpen.disabled = true;
@@ -60,8 +66,8 @@ function promptClear() {
     }
 }
 
-function unpromptClear() {
-    newPopup.className = "new hidden";
+function unprompt() {
+    promptPopup.className = "new hidden";
     newButtons.className = "confirmButtons hidden";
     divToolbar.className = "buttons";
     buttonNew.disabled = false;

@@ -20,7 +20,7 @@
 - Made by Janlu!</textarea>
             <!-- Buttons -->
             <div id="toolbar" class="buttons">
-                <button id="buttonNew" class="icon" onclick="promptClear()">
+                <button id="buttonNew" class="icon" onclick="prompt('Do you want to clear the entire sticky note?', 'clearText()')">
                     <span class="material-symbols-rounded">
                         note_stack
                     </span>
@@ -42,11 +42,11 @@
                 </button>
             </div>
             <!-- Save Prompt -->
-            <div id="new" class="new hidden">
-                <h class="confirmText">Do you want to clear the entire sticky note?</h>
+            <div id="prompt" class="new hidden">
+                <h id="promptText" class="confirmText">prompt_text</h>
                 <div id="newButtons" class="confirmButtons">
-                    <button onclick="clearText()">Yes</button>
-                    <button class="recommended" onclick="unpromptClear()">No</button>
+                    <button id="yesbutton" onclick="">Yes</button>
+                    <button class="recommended" onclick="unprompt()">No</button>
                 </div>
             </div>
             <!-- Options Prompt -->
