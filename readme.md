@@ -3,6 +3,11 @@
 
 A sticky note that is very sticky, and will always be on top.
 
+### Developer Note
+As of Feburary 11th, 2026, the project is now under the MIT License rather than GPLv3. This project has never used/referenced code from other repositories using GPLv3 and never had outside contributions though pull requests, which means that I am the sole author of the code and therefore am (to my knowledge) able to change the license without any issues.
+
+I also want to thank [Stephen Blum](https://www.linkedin.com/in/stephenlb) (CTO at [PubNub](https://www.pubnub.com/)) for recently featuring this repository on his live stream and going out of his way to run it on his Mac.
+
 ### Screenshot (from v1.0.0)
 ![A screenshot of very sticky note!](https://github.com/JanluOfficial/very-sticky-note/assets/95766563/916c651a-302d-4419-a05e-598c6c06bd7a)
 ## Why does this exist?
